@@ -1,4 +1,5 @@
 # webpack-why
+[![npm](https://img.shields.io/npm/v/webpack-why.svg)](https://yarn.pm/webpack-why) [![Build Status](https://travis-ci.org/mxmul/webpack-why.svg?branch=master)](https://travis-ci.org/mxmul/webpack-why)
 
 "Why is this module in my bundle??"
 
