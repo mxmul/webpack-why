@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
-const chalk = require('chalk');
-const fs = require('fs');
-const treeify = require('treeify');
-const Yargs = require('yargs');
+import fs from 'fs';
+
+import chalk from 'chalk';
+import treeify from 'treeify';
+import Yargs from 'yargs';
 
 function getEntries(modules, chunks) {
     const chunkSet = new Set(chunks);
