@@ -1,0 +1,24 @@
+{
+  "name": "webpack-why",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Why is this module in my bundle??",
+  "scripts": {
+    "precommit": "yarn lint",
+    "test": "yarn lint",
+    "lint": "eslint ."
+  },
+  "bin": {
+    "webpack-why": "./src/index.js"
+  },
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "treeify": "^1.0.1",
+    "yargs": "^10.1.1"
+  },
+  "devDependencies": {
+    "@sharkcore/eslint-config": "^1.0.2",
+    "eslint": "^4.15.0",
+    "husky": "^0.14.3"
+  }
+}

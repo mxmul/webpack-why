@@ -1,0 +1,6 @@
+{
+    "extends": "@sharkcore",
+    "rules": {
+        "no-console": 0
+    }
+}
