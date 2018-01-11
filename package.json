@@ -1,6 +1,6 @@
 {
   "name": "webpack-why",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "license": "MIT",
   "description": "Why is this module in my bundle??",
   "scripts": {
@@ -10,6 +10,7 @@
     "prepublishOnly": "yarn && yarn build",
     "test": "yarn lint && flow && yarn build && jest"
   },
+  "files": ["lib"],
   "bin": {
     "webpack-why": "./lib/index.js"
   },
