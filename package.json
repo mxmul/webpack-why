@@ -6,10 +6,12 @@
   "scripts": {
     "precommit": "yarn lint",
     "test": "yarn lint",
-    "lint": "eslint ."
+    "lint": "eslint src",
+    "build": "babel src -d lib",
+    "prepublishOnly": "yarn build"
   },
   "bin": {
-    "webpack-why": "./src/index.js"
+    "webpack-why": "./lib/index.js"
   },
   "dependencies": {
     "chalk": "^2.3.0",
@@ -18,6 +20,9 @@
   },
   "devDependencies": {
     "@sharkcore/eslint-config": "^1.0.2",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
     "eslint": "^4.15.0",
     "husky": "^0.14.3"
   }

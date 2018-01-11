@@ -1,0 +1,14 @@
+{
+  presets: [
+    ['flow'],
+    [
+      'env',
+      {
+        targets: {
+          node: 'current',
+        },
+        useBuiltIns: true,
+      },
+    ],
+  ],
+}
