@@ -1,6 +1,6 @@
 {
   "name": "webpack-why",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "description": "Why is this module in my bundle??",
   "scripts": {
