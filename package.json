@@ -4,11 +4,11 @@
   "license": "MIT",
   "description": "Why is this module in my bundle??",
   "scripts": {
-    "precommit": "yarn lint",
-    "test": "yarn lint",
-    "lint": "eslint src",
     "build": "babel src -d lib",
-    "prepublishOnly": "yarn build"
+    "lint": "eslint src",
+    "precommit": "yarn lint",
+    "prepublishOnly": "yarn build",
+    "test": "yarn lint && flow"
   },
   "bin": {
     "webpack-why": "./lib/index.js"
@@ -24,6 +24,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-flow": "^6.23.0",
     "eslint": "^4.15.0",
+    "flow-bin": "^0.63.1",
     "husky": "^0.14.3"
   }
 }

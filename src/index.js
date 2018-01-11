@@ -1,11 +1,12 @@
 #!/usr/bin/env node
+// @flow
 
 const chalk = require('chalk');
 const fs = require('fs');
 const treeify = require('treeify');
 const Yargs = require('yargs');
 
-function getEntries(modules, chunks) {
+function getEntries(modules: Object[], chunks: Object[]): Set<string> {
     const chunkSet = new Set(chunks);
     return new Set(
         modules
@@ -20,7 +21,11 @@ function getEntries(modules, chunks) {
     );
 }
 
-function buildDependencyTree(allModules, entries, module) {
+function buildDependencyTree(
+    allModules: Object[],
+    entries: Set<string>,
+    module: Object,
+): Object {
     const tree = {
         [module.name]: {},
     };
@@ -42,7 +47,7 @@ function buildDependencyTree(allModules, entries, module) {
     return tree;
 }
 
-function why(stats, moduleName) {
+function why(stats: Object, moduleName: string): void {
     if (stats.modules) {
         const module = stats.modules.find(m => m.name === moduleName);
         if (module) {
@@ -70,7 +75,7 @@ function why(stats, moduleName) {
     }
 }
 
-function main() {
+function main(): void {
     const command = Yargs.command(
         '$0 <file> <module>',
         'Determine why a module is included in a Webpack bundle.',
