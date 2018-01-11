@@ -1,0 +1,550 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "3.10.0",
+  "hash": "33bf293be7363a9733c7",
+  "time": 104,
+  "publicPath": "",
+  "assetsByChunkName": {
+    "pageB": "pageB.bundle.js",
+    "pageA": "pageA.bundle.js",
+    "commons": "commons.js"
+  },
+  "assets": [
+    {
+      "name": "0.chunk.js",
+      "size": 198,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "pageB.bundle.js",
+      "size": 359,
+      "chunks": [
+        1
+      ],
+      "chunkNames": [
+        "pageB"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "pageA.bundle.js",
+      "size": 403,
+      "chunks": [
+        2
+      ],
+      "chunkNames": [
+        "pageA"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "commons.js",
+      "size": 5872,
+      "chunks": [
+        3
+      ],
+      "chunkNames": [
+        "commons"
+      ],
+      "emitted": true
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "pageA": {
+      "chunks": [
+        3,
+        2
+      ],
+      "assets": [
+        "commons.js",
+        "pageA.bundle.js"
+      ]
+    },
+    "pageB": {
+      "chunks": [
+        3,
+        1
+      ],
+      "assets": [
+        "commons.js",
+        "pageB.bundle.js"
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "id": 0,
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "extraAsync": false,
+      "size": 88,
+      "names": [],
+      "files": [
+        "0.chunk.js"
+      ],
+      "hash": "13977192979826dc5dc1",
+      "parents": [
+        1,
+        2
+      ],
+      "modules": [
+        {
+          "id": 1,
+          "identifier": "/private/tmp/webpack/examples/multiple-entry-points/shared.js",
+          "name": "./shared.js",
+          "index": 2,
+          "index2": 1,
+          "size": 88,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/private/tmp/webpack/examples/multiple-entry-points/pageA.js",
+          "issuerId": 2,
+          "issuerName": "./pageA.js",
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 2,
+              "moduleIdentifier": "/private/tmp/webpack/examples/multiple-entry-points/pageA.js",
+              "module": "./pageA.js",
+              "moduleName": "./pageA.js",
+              "type": "amd require",
+              "userRequest": "./shared",
+              "loc": "2:0-4:2"
+            },
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "/private/tmp/webpack/examples/multiple-entry-points/pageB.js",
+              "module": "./pageB.js",
+              "moduleName": "./pageB.js",
+              "type": "require.ensure item",
+              "userRequest": "./shared",
+              "loc": "2:0-5:2"
+            },
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "/private/tmp/webpack/examples/multiple-entry-points/pageB.js",
+              "module": "./pageB.js",
+              "moduleName": "./pageB.js",
+              "type": "cjs require",
+              "userRequest": "./shared",
+              "loc": "3:14-33"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "var common = require(\"./common\");\nmodule.exports = function(msg) {\n\tconsole.log(msg);\n};"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "moduleId": 2,
+          "module": "/private/tmp/webpack/examples/multiple-entry-points/pageA.js",
+          "moduleIdentifier": "/private/tmp/webpack/examples/multiple-entry-points/pageA.js",
+          "moduleName": "./pageA.js",
+          "loc": "2:0-4:2",
+          "name": null,
+          "reasons": [
+            "duplicate"
+          ]
+        },
+        {
+          "moduleId": 3,
+          "module": "/private/tmp/webpack/examples/multiple-entry-points/pageB.js",
+          "moduleIdentifier": "/private/tmp/webpack/examples/multiple-entry-points/pageB.js",
+          "moduleName": "./pageB.js",
+          "loc": "2:0-5:2",
+          "name": null,
+          "reasons": [
+            "duplicate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "rendered": true,
+      "initial": true,
+      "entry": false,
+      "extraAsync": false,
+      "size": 148,
+      "names": [
+        "pageB"
+      ],
+      "files": [
+        "pageB.bundle.js"
+      ],
+      "hash": "ab37c5bfee951ff1aabb",
+      "parents": [
+        3
+      ],
+      "modules": [
+        {
+          "id": 3,
+          "identifier": "/private/tmp/webpack/examples/multiple-entry-points/pageB.js",
+          "name": "./pageB.js",
+          "index": 3,
+          "index2": 3,
+          "size": 148,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            1
+          ],
+          "assets": [],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "var common = require(\"./common\");\nrequire.ensure([\"./shared\"], function(require) {\n\tvar shared = require(\"./shared\");\n\tshared(\"This is page B\");\n});"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "moduleId": 3,
+          "module": "/private/tmp/webpack/examples/multiple-entry-points/pageB.js",
+          "moduleIdentifier": "/private/tmp/webpack/examples/multiple-entry-points/pageB.js",
+          "moduleName": "./pageB.js",
+          "loc": "",
+          "name": "pageB",
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "rendered": true,
+      "initial": true,
+      "entry": false,
+      "extraAsync": false,
+      "size": 105,
+      "names": [
+        "pageA"
+      ],
+      "files": [
+        "pageA.bundle.js"
+      ],
+      "hash": "540352888f91919625d6",
+      "parents": [
+        3
+      ],
+      "modules": [
+        {
+          "id": 2,
+          "identifier": "/private/tmp/webpack/examples/multiple-entry-points/pageA.js",
+          "name": "./pageA.js",
+          "index": 0,
+          "index2": 2,
+          "size": 105,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            2
+          ],
+          "assets": [],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "var common = require(\"./common\");\nrequire([\"./shared\"], function(shared) {\n\tshared(\"This is page A\");\n});"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "moduleId": 2,
+          "module": "/private/tmp/webpack/examples/multiple-entry-points/pageA.js",
+          "moduleIdentifier": "/private/tmp/webpack/examples/multiple-entry-points/pageA.js",
+          "moduleName": "./pageA.js",
+          "loc": "",
+          "name": "pageA",
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "extraAsync": false,
+      "size": 26,
+      "names": [
+        "commons"
+      ],
+      "files": [
+        "commons.js"
+      ],
+      "hash": "46b20966f991f19432ea",
+      "parents": [],
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "/private/tmp/webpack/examples/multiple-entry-points/common.js",
+          "name": "./common.js",
+          "index": 1,
+          "index2": 0,
+          "size": 26,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            3
+          ],
+          "assets": [],
+          "issuer": "/private/tmp/webpack/examples/multiple-entry-points/pageA.js",
+          "issuerId": 2,
+          "issuerName": "./pageA.js",
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/private/tmp/webpack/examples/multiple-entry-points/shared.js",
+              "module": "./shared.js",
+              "moduleName": "./shared.js",
+              "type": "cjs require",
+              "userRequest": "./common",
+              "loc": "1:13-32"
+            },
+            {
+              "moduleId": 2,
+              "moduleIdentifier": "/private/tmp/webpack/examples/multiple-entry-points/pageA.js",
+              "module": "./pageA.js",
+              "moduleName": "./pageA.js",
+              "type": "cjs require",
+              "userRequest": "./common",
+              "loc": "1:13-32"
+            },
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "/private/tmp/webpack/examples/multiple-entry-points/pageB.js",
+              "module": "./pageB.js",
+              "moduleName": "./pageB.js",
+              "type": "cjs require",
+              "userRequest": "./common",
+              "loc": "1:13-32"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "module.exports = \"Common\";"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": []
+    }
+  ],
+  "modules": [
+    {
+      "id": 0,
+      "identifier": "/private/tmp/webpack/examples/multiple-entry-points/common.js",
+      "name": "./common.js",
+      "index": 1,
+      "index2": 0,
+      "size": 26,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        3
+      ],
+      "assets": [],
+      "issuer": "/private/tmp/webpack/examples/multiple-entry-points/pageA.js",
+      "issuerId": 2,
+      "issuerName": "./pageA.js",
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 1,
+          "moduleIdentifier": "/private/tmp/webpack/examples/multiple-entry-points/shared.js",
+          "module": "./shared.js",
+          "moduleName": "./shared.js",
+          "type": "cjs require",
+          "userRequest": "./common",
+          "loc": "1:13-32"
+        },
+        {
+          "moduleId": 2,
+          "moduleIdentifier": "/private/tmp/webpack/examples/multiple-entry-points/pageA.js",
+          "module": "./pageA.js",
+          "moduleName": "./pageA.js",
+          "type": "cjs require",
+          "userRequest": "./common",
+          "loc": "1:13-32"
+        },
+        {
+          "moduleId": 3,
+          "moduleIdentifier": "/private/tmp/webpack/examples/multiple-entry-points/pageB.js",
+          "module": "./pageB.js",
+          "moduleName": "./pageB.js",
+          "type": "cjs require",
+          "userRequest": "./common",
+          "loc": "1:13-32"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 1,
+      "source": "module.exports = \"Common\";"
+    },
+    {
+      "id": 1,
+      "identifier": "/private/tmp/webpack/examples/multiple-entry-points/shared.js",
+      "name": "./shared.js",
+      "index": 2,
+      "index2": 1,
+      "size": 88,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/private/tmp/webpack/examples/multiple-entry-points/pageA.js",
+      "issuerId": 2,
+      "issuerName": "./pageA.js",
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 2,
+          "moduleIdentifier": "/private/tmp/webpack/examples/multiple-entry-points/pageA.js",
+          "module": "./pageA.js",
+          "moduleName": "./pageA.js",
+          "type": "amd require",
+          "userRequest": "./shared",
+          "loc": "2:0-4:2"
+        },
+        {
+          "moduleId": 3,
+          "moduleIdentifier": "/private/tmp/webpack/examples/multiple-entry-points/pageB.js",
+          "module": "./pageB.js",
+          "moduleName": "./pageB.js",
+          "type": "require.ensure item",
+          "userRequest": "./shared",
+          "loc": "2:0-5:2"
+        },
+        {
+          "moduleId": 3,
+          "moduleIdentifier": "/private/tmp/webpack/examples/multiple-entry-points/pageB.js",
+          "module": "./pageB.js",
+          "moduleName": "./pageB.js",
+          "type": "cjs require",
+          "userRequest": "./shared",
+          "loc": "3:14-33"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 1,
+      "source": "var common = require(\"./common\");\nmodule.exports = function(msg) {\n\tconsole.log(msg);\n};"
+    },
+    {
+      "id": 2,
+      "identifier": "/private/tmp/webpack/examples/multiple-entry-points/pageA.js",
+      "name": "./pageA.js",
+      "index": 0,
+      "index2": 2,
+      "size": 105,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        2
+      ],
+      "assets": [],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 0,
+      "source": "var common = require(\"./common\");\nrequire([\"./shared\"], function(shared) {\n\tshared(\"This is page A\");\n});"
+    },
+    {
+      "id": 3,
+      "identifier": "/private/tmp/webpack/examples/multiple-entry-points/pageB.js",
+      "name": "./pageB.js",
+      "index": 3,
+      "index2": 3,
+      "size": 148,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "assets": [],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 0,
+      "source": "var common = require(\"./common\");\nrequire.ensure([\"./shared\"], function(require) {\n\tvar shared = require(\"./shared\");\n\tshared(\"This is page B\");\n});"
+    }
+  ],
+  "filteredModules": 0,
+  "children": []
+}

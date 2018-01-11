@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`webpack-why prints dependency trees 1`] = `
+"Hash: 33bf293be7363a9733c7
+pageB.bundle.js
+└─ ./shared.js
+   └─ ./pageB.js
+
+Hash: 33bf293be7363a9733c7
+pageA.bundle.js
+└─ ./shared.js
+   └─ ./pageA.js
+"
+`;

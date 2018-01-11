@@ -5,10 +5,10 @@
   "description": "Why is this module in my bundle??",
   "scripts": {
     "build": "babel src -d lib",
-    "lint": "eslint src",
+    "lint": "eslint src __tests__",
     "precommit": "yarn lint",
     "prepublishOnly": "yarn build",
-    "test": "yarn lint && flow"
+    "test": "yarn lint && flow && yarn build && jest"
   },
   "bin": {
     "webpack-why": "./lib/index.js"
@@ -24,7 +24,10 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-flow": "^6.23.0",
     "eslint": "^4.15.0",
+    "eslint-plugin-jest": "^21.6.1",
+    "execa": "^0.8.0",
     "flow-bin": "^0.63.1",
-    "husky": "^0.14.3"
+    "husky": "^0.14.3",
+    "jest": "^22.0.5"
   }
 }

@@ -97,6 +97,4 @@ function main(): void {
     why(stats, argv.module);
 }
 
-if (process.env.NODE_ENV !== 'test') {
-    main();
-}
+main();
